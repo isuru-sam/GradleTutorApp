@@ -1,0 +1,2 @@
+rootProject.name='TutorApp"
+include ":api", ":common", ":app"

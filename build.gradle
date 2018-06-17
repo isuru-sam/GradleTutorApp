@@ -1,0 +1,35 @@
+apply plugin:'java'
+apply plugin:'eclipse'
+
+repositories {
+    jcenter()
+}
+allprojects {
+  //Put instructions for all projects
+  
+   task hello << { task -> println "I'm $task.project.name" }
+}
+subprojects {
+
+
+  repositories {
+      mavenCentral()
+  }
+  
+  dependencies {        
+    testCompile "junit:junit:4+"
+ }
+}
+
+
+
+dependencies {   
+  
+    testCompile 'junit:junit:4.12'     
+}
+ 
+dependencies {
+    compile project(':common')
+    compile project(':api')
+	  compile project(':app')
+}
